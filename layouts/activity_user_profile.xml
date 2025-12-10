@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="#FFCF0F"
+            android:padding="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/female" />
+
+            <TextView
+                android:id="@+id/fullname_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profileImage"
+                android:fontFamily="@font/bungee"
+                android:includeFontPadding="false"
+                android:text="Richard Arhin"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullname_label"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/profileImage"
+                android:includeFontPadding="false"
+                android:text="McLister23"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="-100dp"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFCF0F"
+                app:cardElevation="20dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/lost2"
+                        />
+
+                    <TextView
+                        android:id="@+id/lost_pets_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="?"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/lost_pets_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lost_pets_count"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/antic"
+                        android:includeFontPadding="false"
+                        android:text="Lost Items"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#FFCF0F"
+                app:cardElevation="20dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/lost1"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/found_pets_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="2"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/found_pets_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Found Items"
+                        android:layout_below="@+id/found_pets_count"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/antic"
+                        />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_marginTop="-20dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fullname"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/fullname"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Richard Arhin"
+                    android:drawableLeft="@mipmap/username_icon"
+                    android:drawablePadding="5dp"
+                    android:background="#fff"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/email"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="rarhin34@gmail.com"
+                    android:drawableLeft="@mipmap/email"
+                    android:drawablePadding="10dp"
+                    android:background="#fff"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/phoneNum"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="3159087643"
+                    android:drawableLeft="@mipmap/phone"
+                    android:drawablePadding="10dp"
+                    android:background="#fff"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/address"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="234 Long Island, NY 13450"
+                    android:drawableLeft="@mipmap/address"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:layout_marginBottom="1dp"
+                app:passwordToggleEnabled="false"
+                android:id="@+id/password"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="1234456"
+                    android:background="#fff"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@mipmap/password"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:fontFamily="@font/bungee"
+                android:backgroundTint="#FFCF0F"
+                android:textColor="@color/black"
+                android:elevation="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/update"
+                />
+
+            <Button
+                android:id="@+id/postDelAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/update"
+                android:backgroundTint="#FFCF0F"
+                android:elevation="20dp"
+                android:fontFamily="@font/bungee"
+                android:text="Post/ Delelte Ad"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/viewFinders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="Click to View Finders"
+                android:fontFamily="@font/antic"
+                android:textColor="#342E05"
+                android:layout_gravity="right"
+                android:elevation="0dp"
+                android:layout_margin="5dp"
+                android:transitionName="btnSignUp_transition"
+                android:layout_below="@+id/postDelAd"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
